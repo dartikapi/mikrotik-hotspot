@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="2; url=$(link-orig)">
+    <meta name="author" content="ConNet Group, s. r. o., Platanová 3286/26, 010 07 Žilina, Slovakia, www.connet-group.sk">
+    <meta name="description" content="Internet Hotspot">
+    <meta name="keywords" content="Internet Hotspot">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="reset.css?v=2.0" media="all">
+    <link rel="stylesheet" href="screen.css?v=1.0" media="screen">
+    <title>Internet Hotspot &ndash; Advertisement</title>
+  </head>
+  <body onLoad="openAdvert()">
+    <section class="wrapper">
+      <h1>Advertisement</h1>
+      <p>If nothing happens, open
+	    <a href="$(link-redirect)" target="hotspot_advert">advertisement</a> manually.
+	  </p>
+    </section>
+    <script>
+      <!--
+      var popup = '';
+      function openOrig() {
+        if (window.focus) popup.focus();
+        location.href = '$(link-orig)';
+      }
+      function openAd() {
+        location.href = '$(link-redirect)';
+      }
+      function openAdvert() {
+        if (window.name != 'hotspot_advert') {
+          popup = open('$(link-redirect)', 'hotspot_advert', '');
+          setTimeout("openOrig()", 1000);
+          return;
+        }
+        setTimeout("openAd()", 1000);
+      }
+      -->
+    </script>
+  </body>
+</html>

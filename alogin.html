@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="2; url=$(link-redirect)">
+    <meta name="author" content="ConNet Group, s. r. o., Platanová 3286/26, 010 07 Žilina, Slovakia, www.connet-group.sk">
+    <meta name="description" content="Internet Hotspot">
+    <meta name="keywords" content="Internet Hotspot">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="reset.css?v=2.0" media="all">
+    <link rel="stylesheet" href="screen.css?v=1.0" media="screen">
+    <title>Internet Hotspot &ndash; Redirecting</title>
+  </head>
+  <body onLoad="startClock()">
+    <section class="wrapper">
+      <h1>You are logged in</h1>
+      <p>If nothing happens, click
+        <a href="$(link-redirect)">here</a>.
+      </p>
+    </section>
+    <script>
+      <!--
+      function startClock() {
+        $(if popup == 'true')
+          open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+        $(endif)
+        location.href = '$(link-redirect)';
+      }
+      -->
+    </script>
+  </body>
+</html>

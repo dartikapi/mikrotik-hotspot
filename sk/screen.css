@@ -1,0 +1,103 @@
+body {
+  background: #fbfbfb; /* 2% gray */
+  box-sizing: border-box;
+  color: #434242; /* 90% grey */
+  font: normal 85%/100% Arial;
+  padding: 2%; /* 2% of the width */
+  text-align: center;
+}
+
+.wrapper {
+  background: #f1f1f1; /* 7% gray */
+  border: 2px solid #c5c6c6; /* 30% gray */
+  border-radius: 2% 2% 2% 2%;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 4px 8px 8px;
+}
+
+.error {
+  background: #f2dede;
+  border: 2px solid #ebcccc;
+  color: #a94442;
+  font-weight: bold;
+  margin: 1% auto;
+  padding: 4px 8px;
+}
+
+.lang {
+  font-weight: bold;
+  text-align: right;
+}
+
+.powered {
+  font: bold 85%/100% Arial;
+  padding-top: 4%;
+}
+
+h1 {
+  font: bold 200%/200% Arial;
+  padding: 3% 0;
+}
+
+fieldset {
+  display: inline-block;
+  margin-top: 5%;
+  width: 50%;
+}
+
+label {
+  color: #c5c6c6; /* 30% gray */
+  display: block;
+  font: bold 85%/100% Arial;
+  text-align: left;
+}
+
+input {
+  background-color: #fbfbfb; /* 2% gray */
+  border: 1px solid #c5c6c6; /* 30% gray */
+  border-radius: 2% 2% 2% 2%;
+  box-sizing: border-box;
+  display: block;
+  height: 30px;
+  width: 100%;
+  margin: 2% 0;
+}
+
+input[type="submit"] {
+  background-color: #0275d8;
+  color: #fff;
+  display: inline-block;
+  font: normal 125%/125% Arial;
+  height: 45px;
+  width: 50%;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding-left: 2%;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #0275d8;
+}
+
+p {
+  font: normal 100%/125% Arial;
+}
+
+strong {
+  font-weight: bold;
+}
+
+a:link,
+a:visited {
+  color: #434242; /* 90% grey */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #434242; /* 90% grey */
+  text-decoration: underline;
+}

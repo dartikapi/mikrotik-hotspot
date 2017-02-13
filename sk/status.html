@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- $(if refresh-timeout) -->
+    <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+    <!-- $(endif) -->
+    <meta name="author" content="ConNet Group, s. r. o., Platanová 3286/26, 010 07 Žilina, Slovakia, www.connet-group.sk">
+    <meta name="description" content="Internet Hotspot">
+    <meta name="keywords" content="Internet Hotspot">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="reset.css?v=2.0" media="all">
+    <link rel="stylesheet" href="screen.css?v=1.0" media="screen">
+    <title>Internet Hotspot &ndash; Status</title>
+  </head>
+  <!-- $(if advert-pending == 'yes') -->
+  <body onLoad="openAdvert()">
+  <!-- $(else) -->
+  <body>
+  <!-- $(endif) -->
+    <section class="wrapper">
+      <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+      <!-- $(if login-by == 'trial') -->
+      <h1>Vitajte, náš hosť!</h1>
+      <!-- $(elif login-by != 'mac') -->
+      <h1>Vitajte $(username)!</h1>
+      <!-- $(endif) -->
+      <p><strong>IP addresa:</strong> $(ip)</p>
+      <p><strong>Prijaté/odoslané:</strong> $(bytes-out-nice)/$(bytes-in-nice)</p>
+      <!-- $(if session-time-left) -->
+      <p><strong>Dĺžka pripojenia/zostávajúci čas:</strong> $(uptime)/$(session-time-left)</p>
+      <!-- $(else) -->
+      <p><strong>Dĺžka pripojenia:</strong> $(uptime)</p>
+      <!-- $(endif) -->
+      <!-- $(if blocked == 'yes') -->
+      <p><strong>Status:</strong>
+        <a href="$(link-advert)" target="hotspot_advert">Reklama</a> je požadovaná.
+      </p>
+      <!-- $(elif refresh-timeout) -->
+      <p><strong>Obnova statusu:</strong> $(refresh-timeout)</p>
+      <!-- $(endif) -->
+      <!-- $(if login-by-mac != 'yes') -->
+      <input type="submit" value="Odhlásiť sa">
+      <!-- $(endif) -->
+      </form>
+    </section>
+    <script>
+      <!--
+      $(if advert-pending == 'yes')
+      var popup = '';
+      function focusAdvert() {
+        if (window.focus) popup.focus();
+      }
+      function openAdvert() {
+        popup = open('$(link-advert)', 'hotspot_advert', '');
+        setTimeout("focusAdvert()", 1000);
+      }
+      $(endif)
+      function openLogout() {
+        if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+        window.close();
+        return false;
+      }
+      -->
+    </script>
+  </body>
+</html>

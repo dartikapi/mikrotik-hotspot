@@ -1,0 +1,38 @@
+$(if http-status == 302)Hotspot login required$(endif)
+$(if http-header == "Location")$(link-redirect)$(endif)
+<!DOCTYPE html>
+<html>
+  <!--
+    <?xml version="1.0" encoding="UTF-8"?>
+      <WISPAccessGatewayParam
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://$(hostname)/xml/WISPAccessGatewayParam.xsd">
+      <Redirect>
+	    <AccessProcedure>1.0</AccessProcedure>
+	    <AccessLocation>$(location-id)</AccessLocation>
+	    <LocationName>$(location-name)</LocationName>
+	    <LoginURL>$(link-login-only)?target=xml</LoginURL>
+	    <MessageType>100</MessageType>
+	    <ResponseCode>0</ResponseCode>
+      </Redirect>
+      </WISPAccessGatewayParam>
+  -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=$(link-redirect)">
+    <meta name="author" content="ConNet Group, s. r. o., Platanová 3286/26, 010 07 Žilina, Slovakia, www.connet-group.sk">
+    <meta name="description" content="Internet Hotspot">
+    <meta name="keywords" content="Internet Hotspot">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="reset.css?v=2.0" media="all">
+    <link rel="stylesheet" href="screen.css?v=1.0" media="screen">
+    <title>Internet Hotspot &ndash; Redirecting</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <h1>Redirecting...</h1>
+    </section>
+  </body>
+</html>

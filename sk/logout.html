@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="ConNet Group, s. r. o., Platanová 3286/26, 010 07 Žilina, Slovakia, www.connet-group.sk">
+    <meta name="description" content="Internet Hotspot">
+    <meta name="keywords" content="Internet Hotspot">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="reset.css?v=2.0" media="all">
+    <link rel="stylesheet" href="screen.css?v=1.0" media="screen">
+    <title>Internet Hotspot &ndash; Odhlásenie sa</title>
+  </head>
+  <body>
+    <section class="wrapper">
+      <h1>Práve ste sa odhlásili</h1>
+      <p><strong>Používateľ:</strong> $(username)</p>
+      <p><strong>IP adresa:</strong> $(ip)</p>
+      <p><strong>MAC adresa:</strong> $(mac)</p>
+      <p><strong>Dĺžka pripojenia:</strong> $(uptime)</p>
+      <!-- $(if session-time-left) -->
+      <p><strong>Zostávajúci čas:</strong> $(session-time-left)</p>
+      <!-- $(endif) -->
+      <p><strong>Prijaté/odoslané:</strong> $(bytes-out-nice)/$(bytes-in-nice)</p>
+      <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+        <input type="submit" value="Prihlásiť sa">
+      </form>
+    </section>
+    <script>
+      <!--
+      function openLogin() {
+        if (window.name != 'hotspot_logout') return true;
+        open('$(link-login)', '_blank', '');
+        window.close();
+        return false;
+      }
+      -->
+    </script>
+  </body>
+</html>
